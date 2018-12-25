@@ -1,0 +1,54 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>List patient</title>
+</head>
+<!-- <body> -->
+<!--         <table border="1"> -->
+<!--             <thead> -->
+<!--                 <tr> -->
+<!--                     <th><spring:message code="colonne.identifiant"/></th> -->
+<!--                     <th><spring:message code="colonne.libelle"/></th> -->
+<!--                     <th><spring:message code="colonne.quantite"/></th> -->
+<!--                 </tr> -->
+<!--             </thead> -->
+<!--             <tbody> -->
+<%--                 <c:forEach items="${listePatient}" var="course"> --%>
+<!--                     <tr> -->
+<%--                         <td><c:out value="${patient.firstName}"/></td> --%>
+<%--                         <td><c:out value="${patient.lastName}"/></td> --%>
+<%--                         <td><c:out value="${patient.phone}"/></td> --%>
+<!--                     </tr> -->
+<!--                 </c:forEach> -->
+<!--             </tbody> -->
+<!--         </table> -->
+<!--     </body> -->
+<!-- </html> -->
+
+<body>
+	<h2>this is result servlet</h2>
+	<table border="2">
+		<tr>
+
+			<td>First name</td>
+			<td>Last name</td>
+			<td>Phone</td>
+			<td>Address</td>
+
+		</tr>
+		<c:forEach var="patient" items="${patientService.getAll().get(0)}">
+			<tr>
+				<td>${patient.getFirstName()}</td>
+				<td>${patient.getLastName()}</td>
+				<td>${patient.getAddress()}</td>
+				<td>${patient.getPhone()}</td>
+
+			</tr>
+		</c:forEach>
+	</table>
+	<a href="/">To main</a>
+</body>
+</html>

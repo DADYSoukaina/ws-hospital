@@ -1,0 +1,8 @@
+package com.hospital.is.repository;
+
+import java.util.List;
+
+public interface PatientRepository {
+
+	List<String> getAll();
+}

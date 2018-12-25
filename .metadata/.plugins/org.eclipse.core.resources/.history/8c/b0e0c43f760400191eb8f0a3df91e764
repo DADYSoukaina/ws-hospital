@@ -1,0 +1,32 @@
+package com.hospital.is.repository.impl;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.hospital.is.entity.Patient;
+import com.hospital.is.repository.PatientRepository;
+
+@Repository
+public class PatientRespositoryImpl implements PatientRepository {
+
+	public List<String> getAll() {
+
+		return Arrays.asList("1", "2", "5");
+	}
+
+	public Patient create(Patient patient) {
+
+		patient.setFirstName("Code");
+		patient.setLastName("Burners");
+		patient.setAddress("30 rue soulaimane achaairi, 20500, Tetouan Maroc");
+		patient.setPhone("+212 6 66 77 88 99");
+		
+		return null;
+	}
+	
+	
+	
+
+}

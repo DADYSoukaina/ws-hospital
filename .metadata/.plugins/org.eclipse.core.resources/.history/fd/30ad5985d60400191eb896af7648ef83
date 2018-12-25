@@ -1,0 +1,42 @@
+package com.hospital.is;
+
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.hospital.is.service.PatientService;
+
+public class PatientServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	private PatientService patientService;
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException {
+
+		ApplicationContext context = new ClassPathXmlApplicationContext(new String[] { "spring-configuration.xml" });
+
+		patientService = (PatientService) context.getBean("patientServiceImpl");
+		try {
+			PrintWriter printWriter = response.getWriter();
+
+			printWriter.println("<html><body>");
+			printWriter.println("<h1>Patient list</h1>");
+			printWriter.println(patientService.getAll());
+			printWriter.println("</html></body>");
+			
+			
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

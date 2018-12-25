@@ -1,0 +1,7 @@
+
+public class student {
+
+	int marks = 10;
+
+	
+}

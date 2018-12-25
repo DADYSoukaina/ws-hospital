@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Tue Dec 25 15:36:27 CET 2018
+org.eclipse.jst.j2ee.server\:hospital-manager=WEB-INF/lib/hospital-manager-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:hospital-repository=WEB-INF/lib/hospital-repository-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\SOUKAYNA\\.m2\\repository\\org\\springframework\\spring-web\\4.0.2.RELEASE\\spring-web-4.0.2.RELEASE.jar=WEB-INF/lib/spring-web-4.0.2.RELEASE.jar
